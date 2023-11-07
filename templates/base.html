@@ -16,10 +16,10 @@
         <div class="container-fluid">
             {% include 'header.html' %}
             <div class="row">
-                <div class="col-sm-3 col-md-3">
+                <div class="col-sm-4 col-md-4">
                     <div class="card">
                         <div class="card-header">
-                            <h3>menu</h3>
+                            <h3>其他功能</h3>
                             { % block headmessage % }
                             { % endblock % }                           
                         </div>
@@ -30,23 +30,46 @@
                             {% include 'footer.html' %}
                             <div class='list-group'>
                                 <a href='/' class='list-group-item'>HOME</a>
-                                <a href='https://google.com/news' class='list-group-item'>即時新聞</a>
-                                <a href='https://youtube.com/' class='list-group-item'>YouTube</a>
+                                <a href='https://google.com/news' class='list-group-item'>館藏查詢</a>
+                                <a href='https://youtube.com/' class='list-group-item'>本館開放時間</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                    <div class="col-sm-9 col-md-9">
+                    <div class="col-sm-8 col-md-8">
                         <div class="card">
                             <div class "card-header">
                                 {% block headmessage %} 
                                 {% endblock %}
                         </div>
+                        
+                        <div class "card" style="width: 18rem;">   
+                            <img src "借書.jpg" class="card-img-top" alt="...">
                             <div class "card-body">
-                                {% block content %} {% endblock %}
+                                <h5 class "card-title">借書loan books</h5>
+                                <p class "card-text">借閱館藏內的書。</p>
+                                <a href="#" class="btn btn-primary">點我借書</a>
+                            </div>
                         </div>
-                            <div class "card-footer">
-                                {% include 'footer.html' %}
+                        
+                        <div class "card" style="width: 18rem;">   
+                            <img src "還書.jpg" class="card-img-top" alt="...">
+                            <div class "card-body">
+                                <h5 class "card-title">還書return books</h5>
+                                <p class "card-text">歸還您借出的書。</p>
+                                <a href="#" class="btn btn-primary">點我還書</a>
+                            </div>
+                        </div>
+
+                        <div class "card" style="width: 18rem;">   
+                            <img src "登記.jpg" class="card-img-top" alt="...">
+                            <div class "card-body">
+                                <h5 class "card-title">登記register</h5>
+                                <p class "card-text">預先登記想借閱的書籍</p>
+                                <a href="#" class="btn btn-primary">點我登記</a>
+                            </div>
+                        </div>
+                        
                         </div>
                     </div>
                 </div>
