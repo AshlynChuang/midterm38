@@ -1,5 +1,9 @@
 from django.db import models
-class Post(models.Model):
+
+class BookMe(models.Model):
+    title = models.TextField()
+    
+class Book(models.Model):
     STATUS = (
         ('Loaned', '已借出'),
         ('On shelf', '在架上'),
