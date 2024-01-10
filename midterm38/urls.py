@@ -27,7 +27,8 @@ urlpatterns = [
     path('post/<slug:slug>/', mv.showpost, name = "showpost"),
     path('test/', mv.testme),
     path('', HomeView.as_view(), name='home'),
-    path('signlog/', SignLogView.as_view(), name='signlog'),
-    path('login/', LoginView.as_view(), name='login'),
-    path('register/', RegisterView.as_view(), name='register')]
+    path('login/', mv.login, name='login'), 
+    path('register/', RegisterView.as_view(), name='register'),
+    path('login/', include('midterm38.urls', namespace='midterm38')),
+    path('process_returns/', process_returns, name='process_returns')]
 
