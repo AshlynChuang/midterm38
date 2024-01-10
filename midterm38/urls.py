@@ -17,9 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from mysite import views as mv
+from mysite.views import HomeView, SignLogView, LoginView, RegisterView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mv.homepage, name = "homepage"),
     path('post/<slug:slug>/', mv.showpost, name = "showpost"),
-    path('test/', mv.testme),]
+    path('test/', mv.testme),
+    path('', HomeView.as_view(), name='home'),
+    path('signlog/', SignLogView.as_view(), name='signlog'),
+    path('login/', LoginView.as_view(), name='login'),
+    path('register/', RegisterView.as_view(), name='register')]
+
